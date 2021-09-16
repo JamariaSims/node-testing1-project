@@ -147,10 +147,10 @@ class Car {
       this.odometer = this.odometer + distance;
       this.tank = this.tank - distance / this.mpg;
     } else {
-      return console.log(
-        `${this.odometer} (ran out of gas after ${distance} miles)`
-      );
+      this.tank = 0;
+      this.odometer = this.odometer + milesCanDrive;
     }
+
     return this.odometer;
   }
 
